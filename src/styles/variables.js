@@ -1,30 +1,35 @@
 const PRIMARY = {
-  GRAY1: '#f8f9fa',
-  GRAY4: '#ced4da',
-  GRAY5: '#adb5bd',
-  GRAY8: '#343a40',
-  GRAY9: '#212529',
+  GRAY_0: '#f8f9fa',
+  GRAY_1: '#f1f3f5',
+  GRAY_2: '#e9ecef',
+  GRAY_3: '#dee2e6',
+  GRAY_4: '#ced4da',
+  GRAY_5: '#adb5bd',
+  GRAY_6: '#868e96',
+  GRAY_7: '#495057',
+  GRAY_8: '#343a40',
+  GRAY_9: '#212529',
 };
 const SECONDARY = {
-  TEAL2: '#96f2d7',
-  TEAL4: '#38d9a9',
-  TEAL5: '#20c997',
-  TEAL9: '#087f5b',
+  TEAL_1: '#e6fcf5',
+  TEAL_2: '#96f2d7',
+  TEAL_4: '#38d9a9',
+  TEAL_5: '#20c997',
+  TEAL_9: '#087f5b',
 };
 const LAYOUT = {
-  SPACING3: '1rem',
-  SPACING4: '1.5rem',
-  SPACING5: '2rem',
-  SPACING6: '2rem',
-};
-const FONTSTYLE = {
-  MAIN: `font-size:1rem; font-weight: 500; color: ${PRIMARY.GRAY9};`,
-  LOGO_LIGHT: `font-size:2rem; font-weight: 400; color: ${SECONDARY.TEAL9};`,
-  LOGO_DARK: `font-size:2rem; font-weight: 400; color: ${SECONDARY.TEAL9};`,
+  SIZE_3: '0.382rem',
+  SIZE_4: '0.618rem',
+  SIZE_5: '1rem',
+  SIZE_6: '1.618rem',
+  SIZE_7: '2.618rem',
+  SIZE_8: '4.236rem',
+  SIZE_9: '6.854rem',
+  SIZE_10: '11.089rem',
 };
 
 const BUTTONS = {
-  HEADER: `text-transform:uppercase; font-weight: 300; background-color: none;`,
+  HEADER: `text-transform:uppercase; font-weight: 300; background-color: transparent;`,
 };
 
-export { PRIMARY, SECONDARY, LAYOUT, FONTSTYLE, BUTTONS };
+export { PRIMARY, SECONDARY, LAYOUT, BUTTONS };

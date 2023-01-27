@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Background from './background.jpg';
+import Background from '../../images/background.jpg';
 
 const StyledMain = styled.div`
   height: 100vh;

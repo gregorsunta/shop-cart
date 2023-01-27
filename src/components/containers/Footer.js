@@ -1,13 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import { LAYOUT } from '../../styles/variables';
+import { PRIMARY, SECONDARY, LAYOUT } from '../../styles/variables';
 
 const StyledFooter = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
 
-  padding: ${LAYOUT.SPACING3};
+  padding: ${LAYOUT.SIZE_5};
+  background-color: ${PRIMARY.GRAY_8};
+
+  color: ${SECONDARY.TEAL_1};
 `;
 
 const Footer = () => {

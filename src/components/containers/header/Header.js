@@ -1,33 +1,42 @@
 import React from 'react';
 import styled from 'styled-components';
 import Logo from './Logo';
-import { PRIMARY, LAYOUT, BUTTONS } from '../../../styles/variables';
+import { PRIMARY, LAYOUT, SECONDARY } from '../../../styles/variables';
 import Button from '../../common/Button';
 
-const StyledHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: ${LAYOUT.SPACING3};
-  background-color: white;
+const StyledHeader = styled.header`
   position: fixed;
+  background-color: ${PRIMARY.GRAY_8};
   width: 100vw;
-  opacity: 0.8;
-`;
-const StyledIcons = styled.div`
+
   display: flex;
-  gap: ${LAYOUT.SPACING3};
+  justify-content: center;
+
+  padding: ${LAYOUT.SIZE_5};
+`;
+const StyledDiv = styled.div`
+  display: flex;
+  width: 880px;
+  justify-content: space-between;
+
+  height: min-content;
+`;
+const StyledButtons = styled.div`
+  display: flex;
+  gap: ${LAYOUT.SIZE_6};
+  align-items: stretch;
 `;
 
 const Header = () => {
   return (
     <StyledHeader>
-      <Logo />
-      <StyledIcons>
-        <Button title={'home'} page={'/'} />
-        <Button title={'shop'} page={'/shop'} />
-      </StyledIcons>
+      <StyledDiv>
+        <Logo />
+        <StyledButtons>
+          <Button title={'home'} page={'/'} />
+          <Button title={'shop'} page={'/shop'} />
+        </StyledButtons>
+      </StyledDiv>
     </StyledHeader>
   );
 };
