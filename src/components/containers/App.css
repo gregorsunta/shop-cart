@@ -1,0 +1,9 @@
+@import url('../../styles/reset-styles.css');
+@import url('../../styles/fonts.css');
+
+:root {
+  font-family: 'Heebo';
+}
+* {
+  box-sizing: border-box;
+}
