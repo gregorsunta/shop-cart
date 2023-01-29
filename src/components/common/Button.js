@@ -5,22 +5,28 @@ import { PRIMARY, SECONDARY, LAYOUT } from '../../styles/variables';
 
 const StyledButton = styled.button`
   font-size: ${LAYOUT.SIZE_5};
-  color: ${SECONDARY.TEAL_1};
-  background-color: transparent;
+  color: ${PRIMARY.GRAY_9};
+  background-color: ${SECONDARY.YELLOW_5};
   text-transform: uppercase;
-  height: 100%;
   border: none;
-  transition: transform 0.1s;
+  padding: ${LAYOUT.SIZE_3};
+  transition: background-color 0.1s;
+  border: solid ${'2px'} ${PRIMARY.GRAY_9};
   &:hover {
-    transform: scale(1.2, 1.2);
-    background-color: ${PRIMARY.GRAY_7};
+    background-color: ${SECONDARY.YELLOW_2};
+    border: solid ${'2px'} ${PRIMARY.GRAY_9};
   }
 `;
-const Button = ({ title, page }) => {
+const Button = ({ title, link }) => {
   return (
-    <Link to={page}>
-      <StyledButton>{title}</StyledButton>
-    </Link>
+    <>
+      {link && (
+        <Link to={link}>
+          <StyledButton>{title}</StyledButton>
+        </Link>
+      )}
+      {!link && <StyledButton>{title}</StyledButton>}
+    </>
   );
 };
 

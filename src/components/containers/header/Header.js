@@ -2,41 +2,33 @@ import React from 'react';
 import styled from 'styled-components';
 import Logo from './Logo';
 import { PRIMARY, LAYOUT, SECONDARY } from '../../../styles/variables';
-import Button from '../../common/Button';
+import HeaderButtons from './HeaderButtons';
 
 const StyledHeader = styled.header`
   position: fixed;
-  background-color: ${PRIMARY.GRAY_8};
+  background-color: ${PRIMARY.GRAY_2};
   width: 100vw;
 
   display: flex;
   justify-content: center;
 
-  padding: ${LAYOUT.SIZE_5};
+  // padding: ${LAYOUT.SIZE_5};
 `;
-const StyledDiv = styled.div`
+const StyledContainer = styled.div`
   display: flex;
   width: 880px;
   justify-content: space-between;
 
   height: min-content;
 `;
-const StyledButtons = styled.div`
-  display: flex;
-  gap: ${LAYOUT.SIZE_6};
-  align-items: stretch;
-`;
 
 const Header = () => {
   return (
     <StyledHeader>
-      <StyledDiv>
+      <StyledContainer>
         <Logo />
-        <StyledButtons>
-          <Button title={'home'} page={'/'} />
-          <Button title={'shop'} page={'/shop'} />
-        </StyledButtons>
-      </StyledDiv>
+        <HeaderButtons />
+      </StyledContainer>
     </StyledHeader>
   );
 };

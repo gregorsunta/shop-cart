@@ -1,17 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
+import useItemList from './useItemList';
+import useFilters from './useFilters';
+import ItemList from './ItemList';
 
 const StyledMain = styled.div`
-  height: 100vh;
+  min-height: 100vh;
 `;
 const StyledBackground = styled.img`
   width: 100vw;
 `;
 
 const Shop = () => {
+  const [filters] = useFilters(null);
   return (
     <StyledMain>
-      <StyledBackground />
+      <ItemList filters={filters} />
     </StyledMain>
   );
 };

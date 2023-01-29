@@ -11,12 +11,22 @@ const PRIMARY = {
   GRAY_9: '#212529',
 };
 const SECONDARY = {
-  TEAL_1: '#e6fcf5',
+  TEAL_0: '#e6fcf5',
+  TEAL_1: '#c3fae8',
   TEAL_2: '#96f2d7',
+  TEAL_3: '#63e6be',
   TEAL_4: '#38d9a9',
   TEAL_5: '#20c997',
+  TEAL_6: '#12b886',
+  TEAL_7: '#0ca678',
+  TEAL_8: '#099268',
   TEAL_9: '#087f5b',
+  YELLOW_2: '#fff5c9',
+  YELLOW_3: '#fff1ad',
+  YELLOW_4: '#ffec92',
+  YELLOW_5: '#FFE777',
 };
+
 const LAYOUT = {
   SIZE_3: '0.382rem',
   SIZE_4: '0.618rem',
