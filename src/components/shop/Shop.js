@@ -1,22 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
-import useItemList from './useItemList';
-import useFilters from './useFilters';
-import ItemList from './ItemList';
+import { Route, Routes, useParams } from 'react-router-dom';
+import ItemList from './ItemList.js';
+import CategoryList from './CategoryList';
 
-const StyledMain = styled.div`
-  min-height: 100vh;
+const StyledAside = styled.aside`
+  position: fixed;
+  width: min-content;
+  height: 7rem;
 `;
-const StyledBackground = styled.img`
-  width: 100vw;
+const StyledList = styled.ul`
+  width: 100%;
+  height: 100%;
+  padding-left: 25vw;
 `;
-
 const Shop = () => {
-  const [filters] = useFilters(null);
   return (
-    <StyledMain>
-      <ItemList filters={filters} />
-    </StyledMain>
+    <>
+      <StyledAside>
+        <CategoryList />
+      </StyledAside>
+      <StyledList>
+        <Routes>
+          <Route path={':category'} element={<ItemList />} />
+        </Routes>
+      </StyledList>
+    </>
   );
 };
 

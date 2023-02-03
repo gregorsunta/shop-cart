@@ -8,7 +8,7 @@ const StyledText = styled.p`
   font-size: ${LAYOUT.SIZE_6};
 `;
 const StyledImg = styled.img`
-  height: 50px;
+  height: 2.5rem;
   transform: rotate(-90deg);
 `;
 const StyledLogo = styled.div`

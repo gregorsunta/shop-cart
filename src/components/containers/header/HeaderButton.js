@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { PRIMARY, SECONDARY, LAYOUT } from '../../../styles/variables';
 
@@ -21,16 +21,14 @@ let ActiveStyle = {
   backgroundColor: `${PRIMARY.GRAY_3}`,
   borderBottom: `solid 3px ${PRIMARY.GRAY_5}`,
 };
-const Button = ({ id, title, link, handleClick, active }) => {
+const Button = ({ id, title, link, handleClick }) => {
   return (
-    <Link to={link}>
-      <StyledButton
-        onClick={handleClick.bind(this, id)}
-        style={active ? ActiveStyle : {}}
-      >
-        {title}
-      </StyledButton>
-    </Link>
+    <NavLink
+      to={link}
+      style={({ isActive }) => (isActive ? ActiveStyle : undefined)}
+    >
+      <StyledButton>{title}</StyledButton>
+    </NavLink>
   );
 };
 

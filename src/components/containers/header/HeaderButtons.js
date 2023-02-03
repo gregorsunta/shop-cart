@@ -8,20 +8,13 @@ const StyledButtons = styled.div`
   align-items: stretch;
 `;
 const buttonsInfo = [
-  { id: uniqid(), title: 'home', link: '/', active: false },
-  { id: uniqid(), title: 'shop', link: '/shop', active: false },
-  { id: uniqid(), title: 'banana', link: '/banana', active: false },
+  { id: uniqid(), title: 'home', link: '/' },
+  { id: uniqid(), title: 'shop', link: '/shop/all-products' },
 ];
 
 const HeaderButtons = () => {
   const [buttons, setButtons] = useState(buttonsInfo);
 
-  const changeActive = (id) => {
-    const newButtons = buttons.map((btn) =>
-      btn.id === id ? { ...btn, active: true } : { ...btn, active: false },
-    );
-    setButtons(newButtons);
-  };
   const buttonList = () => {
     return buttons.map((btn) => (
       <HeaderButton
@@ -29,15 +22,10 @@ const HeaderButtons = () => {
         id={btn.id}
         title={btn.title}
         link={btn.link}
-        handleClick={changeActive}
         active={btn.active}
       />
     ));
   };
-
-  //   useEffect(() => {
-  //     setButtons();
-  //   });
 
   return <StyledButtons>{buttonList()}</StyledButtons>;
 };
