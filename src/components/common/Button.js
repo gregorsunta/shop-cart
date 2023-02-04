@@ -16,6 +16,9 @@ const StyledButton = styled.button`
     background-color: ${SECONDARY.YELLOW_2};
     border: solid ${'2px'} ${PRIMARY.GRAY_9};
   }
+  &:active {
+    background-color: ${PRIMARY.GRAY_3};
+  }
 `;
 const Button = ({ title, link }) => {
   return (

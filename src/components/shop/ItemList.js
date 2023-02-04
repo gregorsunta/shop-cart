@@ -5,8 +5,9 @@ import Item from './Item';
 import components from '../../data/components';
 
 const StyledDiv = styled.div`
-  width: 500px;
-  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  gap: 2rem;
 `;
 
 const ItemList = () => {
@@ -17,13 +18,8 @@ const ItemList = () => {
     <StyledDiv>
       {components
         .find((el) => el.name === category)
-        .items.map((el) => {
-          return (
-            <>
-              <p>{el.name}</p>
-              <p>{el.price}</p>
-            </>
-          );
+        .items.map((item) => {
+          return <Item item={item} />;
         })}
     </StyledDiv>
   );
