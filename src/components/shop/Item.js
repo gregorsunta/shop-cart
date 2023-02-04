@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { PRIMARY } from '../../styles/variables';
+import { PRIMARY, LAYOUT } from '../../styles/variables';
 import Button from '../common/Button';
 
 const StyledContainer = styled.div`

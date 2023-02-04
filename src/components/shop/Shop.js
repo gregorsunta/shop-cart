@@ -9,23 +9,21 @@ const StyledAside = styled.aside`
   width: min-content;
   height: 7rem;
 `;
-const StyledList = styled.ul`
-  width: 100%;
-  height: 100%;
+const StyledDiv = styled.div`
   padding-left: 25vw;
 `;
 const Shop = () => {
   return (
-    <>
+    <div>
       <StyledAside>
         <CategoryList />
       </StyledAside>
-      <StyledList>
+      <StyledDiv>
         <Routes>
           <Route path={':category'} element={<ItemList />} />
         </Routes>
-      </StyledList>
-    </>
+      </StyledDiv>
+    </div>
   );
 };
 

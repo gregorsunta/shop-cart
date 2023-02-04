@@ -22,7 +22,6 @@ const HeaderButtons = () => {
         id={btn.id}
         title={btn.title}
         link={btn.link}
-        active={btn.active}
       />
     ));
   };

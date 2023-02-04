@@ -8,12 +8,20 @@ const CategoryList = () => {
   const StyledContainer = styled.div`
     display: flex;
     flex-direction: column;
+
+    width: 20vw;
   `;
+
   return (
     <StyledContainer>
-      {components.map((component) => (
-        <Category title={component.name} key={uniqid()} />
-      ))}
+      {components.map((component) => {
+        const formattedName = component.name.replaceAll('-', ' ');
+        const wordArr = formattedName.split(' ');
+        const formattedArr = wordArr.map(
+          (word) => word[0].toUpperCase() + word.slice(1),
+        );
+        return <Category title={formattedArr.join(' ')} key={uniqid()} />;
+      })}
     </StyledContainer>
   );
 };
