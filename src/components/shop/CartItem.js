@@ -7,13 +7,13 @@ const CartItem = ({ item, setQuantity }) => {
   const { id, name, price, image, quantity } = item;
 
   const changeQuantity = (e) => {
-    setQuantity(id, Number(e.target.value));
+    setQuantity(id, +e.target.value);
   };
   const incrementQuantity = (id, prevQuantity) => {
-    setQuantity(id, Number(prevQuantity) + 1);
+    setQuantity(id, +prevQuantity + 1);
   };
   const decrementQuantity = (id, prevQuantity) => {
-    setQuantity(id, Number(prevQuantity) - 1);
+    setQuantity(id, +prevQuantity - 1);
   };
   return (
     <div className={styles.container}>

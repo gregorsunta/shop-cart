@@ -48,14 +48,18 @@ const App = () => {
     }
   };
   const setQuantity = (id, quantity) => {
-    const item = cartItems.find((cartItem) => cartItem.id === id);
-    setCartItems(
-      cartItems.map((cartItem) =>
-        cartItem.id === item.id
-          ? { ...cartItem, quantity: quantity }
-          : cartItem,
-      ),
-    );
+    if (quantity === 0) {
+      setCartItems(cartItems.filter((cartItem) => cartItem.id !== id));
+    } else {
+      const item = cartItems.find((cartItem) => cartItem.id === id);
+      setCartItems(
+        cartItems.map((cartItem) =>
+          cartItem.id === item.id
+            ? { ...cartItem, quantity: quantity }
+            : cartItem,
+        ),
+      );
+    }
   };
   const computeTotalPrice = () => {
     let sum = 0;
@@ -66,6 +70,7 @@ const App = () => {
     }, 0);
     setTotalPrice(sum);
   };
+  // useEffect(() => {}, []);
   useEffect(() => {
     computeTotalPrice();
   }, [cartItems]);
