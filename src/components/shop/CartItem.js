@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { PRIMARY, LAYOUT, SECONDARY } from '../../styles/variables';
 import Button from '../common/Button';
@@ -23,33 +23,33 @@ const StyledPrice = styled.p`
   color: ${PRIMARY.GRAY_7};
 `;
 
-const CartItem = ({
-  item,
-  addItem,
-  incrementQuantity,
-  decrementQuantity,
-  setQuantity,
-}) => {
+const CartItem = ({ item, addItem, setQuantity }) => {
+  const { id, name, price, image, quantity } = item;
+  const inputEl = useRef(null);
+  const changeQuantity = (e) => {
+    setQuantity(id, e.target.value);
+  };
+  const incrementQuantity = (id, prevQuantity) => {
+    inputEl.current.value = quantity + 1;
+    setQuantity(id, Number(prevQuantity) + 1);
+  };
+  const decrementQuantity = (id, prevQuantity) => {
+    inputEl.current.value = quantity - 1;
+    setQuantity(id, Number(prevQuantity) - 1);
+  };
   return (
     <StyledContainer>
-      <StyledImg src={item.image} alt="" />
-      <p>{item.name}</p>
-      <StyledPrice>{item.price}€</StyledPrice>
-      <Button
-        title={'-'}
-        handleClick={(e) => decrementQuantity(item.id, item.quantity)}
-      />
+      <StyledImg src={image} alt="" />
+      <p>{name}</p>
+      <StyledPrice>{price}€</StyledPrice>
+      <button onClick={(e) => decrementQuantity(id, quantity)}>-</button>
       <input
+        ref={inputEl}
         type="number"
         defaultValue={item.quantity}
-        onChange={(e) => {
-          setQuantity(item.id, e.target.value);
-        }}
+        onChange={changeQuantity}
       />
-      <Button
-        title={'+'}
-        handleClick={(e) => incrementQuantity(item.id, item.quantity)}
-      />
+      <button onClick={(e) => incrementQuantity(id, quantity)}>+</button>
     </StyledContainer>
   );
 };

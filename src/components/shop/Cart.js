@@ -33,12 +33,6 @@ const ItemContainer = {
 };
 
 const Cart = ({ showCart, cartItems, setQuantity }) => {
-  const incrementQuantity = (id, prevQuantity) => {
-    setQuantity(id, Number(prevQuantity) + 1);
-  };
-  const decrementQuantity = (id, prevQuantity) => {
-    setQuantity(id, Number(prevQuantity) - 1);
-  };
   return (
     <div
       style={showCart ? ActiveStyledContainer : StyledContainer}
@@ -46,13 +40,7 @@ const Cart = ({ showCart, cartItems, setQuantity }) => {
     >
       <div style={ItemContainer}>
         {cartItems.map((item) => (
-          <CartItem
-            key={uniqid()}
-            item={item}
-            setQuantity={setQuantity}
-            incrementQuantity={incrementQuantity}
-            decrementQuantity={decrementQuantity}
-          />
+          <CartItem key={item.id} item={item} setQuantity={setQuantity} />
         ))}
       </div>
     </div>

@@ -18,7 +18,7 @@ const CategoryList = () => {
         const formattedArr = wordArr.map(
           (word) => word[0].toUpperCase() + word.slice(1),
         );
-        return <Category title={formattedArr.join(' ')} key={uniqid()} />;
+        return <Category title={formattedArr.join(' ')} key={formattedName} />;
       })}
     </StyledContainer>
   );
