@@ -8,6 +8,13 @@ import I913900K from './images/CPU/I913900K.jpeg';
 import TOMAHAWK from './images/MTHB/TOMAHAWK.jpeg';
 import PRIME from './images/MTHB/PRIME.jpeg';
 import ROG from './images/MTHB/ROG.jpeg';
+import KINGSTON from './images/SSD/KINGSTON240GB.jpeg';
+import SAMSUNG from './images/SSD/SAMSUNG1TB.jpeg';
+import BARRACUDA from './images/HDD/BARRACUDA4TB.jpeg';
+import CORSAIR850W from './images/PSU/CORSAIR850W.jpeg';
+import CORSAIR1200W from './images/PSU/CORSAIR1200W.jpeg';
+
+//import all files from './images/MTHB/ROG.jpeg'
 
 const components = [
   {
@@ -75,15 +82,48 @@ const components = [
   },
   {
     name: 'power-supplies',
-    items: [{ id: uniqid(), name: '', price: 164.95 }],
+    items: [
+      {
+        id: uniqid(),
+        name: `Corsair RM850e 850W 80 PLUS Gold Fully Modular PSU Power Supply`,
+        price: 132.99,
+        image: CORSAIR850W,
+      },
+      {
+        id: uniqid(),
+        name: `Corsair HX1200 1200W 80 PLUS Platinum Fully Modular PSU Power Supply`,
+        price: 220.97,
+        image: CORSAIR1200W,
+      },
+    ],
   },
   {
     name: 'solid-state-drives',
-    items: [{ id: uniqid(), name: 'banana', price: 475.99 }],
+    items: [
+      {
+        id: uniqid(),
+        name: `Kingston A400 240GB 2.5" SSD Solid State Drive`,
+        price: 18.83,
+        image: KINGSTON,
+      },
+      {
+        id: uniqid(),
+        name: `Samsung 870 QVO 1TB 2.5" SATA III SSD`,
+        price: 81.49,
+        image: SAMSUNG,
+      },
+    ],
   },
   {
     name: 'hard-disk-drives',
-    items: [{ id: uniqid(), name: 'banana', price: 475.99 }],
+    items: [
+      {
+        id: uniqid(),
+        name: `Seagate 4TB BarraCuda Desktop Hard Drive 3.5" SATA III 6GB's 5400RPM 256MB Cache`,
+        price: 69.48,
+        image: BARRACUDA,
+      },
+    ],
   },
 ];
 
