@@ -3,15 +3,13 @@ import components from '../../data/components';
 import Category from './Category';
 import uniqid from 'uniqid';
 import styled from 'styled-components';
+const StyledContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 
+  width: 20vw;
+`;
 const CategoryList = () => {
-  const StyledContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-
-    width: 20vw;
-  `;
-
   return (
     <StyledContainer>
       {components.map((component) => {

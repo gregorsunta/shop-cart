@@ -20,15 +20,20 @@ const StyledButton = styled.button`
     background-color: ${PRIMARY.GRAY_3};
   }
 `;
-const Button = ({ title, link }) => {
+const Button = ({ title, link, handleClick }) => {
   return (
     <>
+      {/* {console.log(handleClick)} */}
       {link && (
         <NavLink to={link}>
           <StyledButton>{title}</StyledButton>
         </NavLink>
       )}
-      {!link && <StyledButton>{title}</StyledButton>}
+      {!link && (
+        <StyledButton onClick={handleClick ? handleClick : undefined}>
+          {title}
+        </StyledButton>
+      )}
     </>
   );
 };

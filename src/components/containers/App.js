@@ -5,28 +5,80 @@ import Home from '../homepage/Home';
 import Shop from '../shop/Shop';
 import './App.css';
 import ScrollToTop from '../common/scrollToTop';
-import styled from 'styled-components';
+import { useState } from 'react';
+import uniqid from 'uniqid';
+import Cart from '../shop/Cart';
+import components from '../../data/components';
 
 const StyledMain = {
   paddingTop: '2.5rem',
   minHeight: '100vh',
   // height: '1px', //used this because of a firefox bug
 };
+const allItems = [];
+components.forEach((component) => allItems.push(...component.items));
 
-function App() {
+const App = () => {
+  const [items, setItems] = useState(allItems);
+  const [cartItems, setCartItems] = useState([]);
+  const [showCart, setShowCart] = useState(false);
+
+  const toggleCartIsActive = () => {
+    setShowCart(!showCart);
+  };
+  const HeaderButtons = [
+    { id: uniqid(), name: 'home', link: '/' },
+    { id: uniqid(), name: 'shop', link: '/shop' },
+    { id: uniqid(), name: 'cart', handleClick: toggleCartIsActive },
+  ];
+  const addItem = (id) => {
+    // should this be async??
+    const sameProduct = cartItems.find((item) => item.id === id);
+
+    if (sameProduct) {
+      setCartItems(
+        cartItems.map((cartItem) =>
+          cartItem.id === sameProduct.id
+            ? { ...cartItem, quantity: cartItem.quantity + 1 }
+            : cartItem,
+        ),
+      );
+    } else {
+      const item = items.find((item) => item.id === id);
+      setCartItems([...cartItems, { ...item, quantity: 1 }]);
+    }
+  };
+  const setQuantity = (id, quantity) => {
+    const item = cartItems.find((cartItem) => cartItem.id === id);
+    setCartItems(
+      cartItems.map((cartItem) =>
+        cartItem.id === item.id
+          ? { ...cartItem, quantity: quantity }
+          : cartItem,
+      ),
+    );
+  };
   return (
     <div>
       <ScrollToTop />
-      <Header />
+      <Header handleShowCart={toggleCartIsActive} buttons={HeaderButtons} />
       <div style={StyledMain}>
         <Routes>
           <Route path={'/'} element={<Home />} />
-          <Route path={'/shop/*'} element={<Shop />} />
+          <Route
+            path={'/shop/*'}
+            element={<Shop showCart={showCart} addItem={addItem} />}
+          />
         </Routes>
       </div>
+      <Cart
+        showCart={showCart}
+        cartItems={cartItems}
+        setQuantity={setQuantity}
+      />
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

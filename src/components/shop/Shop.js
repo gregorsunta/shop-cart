@@ -1,28 +1,39 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Route, Routes, useParams } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import ItemList from './ItemList.js';
 import CategoryList from './CategoryList';
+import components from '../../data/components';
 
-const StyledAside = styled.aside`
-  position: fixed;
-  width: min-content;
-  height: 7rem;
-`;
-const StyledDiv = styled.div`
-  padding-left: 25vw;
-`;
-const Shop = () => {
+const StyledContainer = {
+  display: 'flex',
+  justifyContent: 'space-between',
+  // alignItems: 'center',
+};
+const StyledAside = {};
+const StyledDiv = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  maxWidth: '80vw',
+};
+
+const Shop = ({ addItem }) => {
   return (
-    <div>
-      <StyledAside>
+    <div style={StyledContainer}>
+      <div style={StyledAside}>
         <CategoryList />
-      </StyledAside>
-      <StyledDiv>
+      </div>
+      <div style={StyledDiv}>
         <Routes>
-          <Route path={':category'} element={<ItemList />} />
+          <Route
+            path={'/'}
+            element={<ItemList itemsProp={components} addItem={addItem} />}
+          />
+          <Route
+            path={':category'}
+            element={<ItemList itemsProp={components} addItem={addItem} />}
+          />
         </Routes>
-      </StyledDiv>
+      </div>
     </div>
   );
 };

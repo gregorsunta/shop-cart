@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Logo from './Logo';
 import { PRIMARY, LAYOUT, SECONDARY } from '../../../styles/variables';
-import HeaderButtons from './HeaderButtons';
+import HeaderButton from './HeaderButton';
+import { useEffect, useState } from 'react';
+import uniqid from 'uniqid';
 
 const StyledHeader = styled.header`
   position: fixed;
@@ -11,8 +13,6 @@ const StyledHeader = styled.header`
 
   display: flex;
   justify-content: center;
-
-  // padding: ${LAYOUT.SIZE_5};
 `;
 const StyledContainer = styled.div`
   display: flex;
@@ -21,13 +21,26 @@ const StyledContainer = styled.div`
 
   height: min-content;
 `;
+const StyledButtonsContainer = styled.div`
+  display: flex;
+  align-items: stretch;
+`;
 
-const Header = () => {
+const Header = ({ buttons }) => {
   return (
     <StyledHeader>
       <StyledContainer>
         <Logo />
-        <HeaderButtons />
+        <StyledButtonsContainer>
+          {buttons.map((btn) => (
+            <HeaderButton
+              key={btn.id}
+              title={btn.name}
+              link={btn.link}
+              handleClick={btn.handleClick}
+            />
+          ))}
+        </StyledButtonsContainer>
       </StyledContainer>
     </StyledHeader>
   );

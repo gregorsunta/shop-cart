@@ -24,8 +24,10 @@ let ActiveStyle = {
 const Button = ({ id, title, link, handleClick }) => {
   return (
     <NavLink
+      key={id}
       to={link}
-      style={({ isActive }) => (isActive ? ActiveStyle : undefined)}
+      style={({ isActive }) => (isActive && link ? ActiveStyle : undefined)}
+      onClick={handleClick}
     >
       <StyledButton>{title}</StyledButton>
     </NavLink>

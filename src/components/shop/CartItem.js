@@ -5,36 +5,53 @@ import Button from '../common/Button';
 
 const StyledContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
   aspect-ratio: 1/1.4;
-
-  padding: ${LAYOUT.SIZE_6};
+  height: 50px;
+  // padding: ${LAYOUT.SIZE_4};
   box-shadow: 0px 0px 3px ${PRIMARY.GRAY_3};
   transition: background-color 0.2s;
 `;
 const StyledImg = styled.img`
-  max-width: 100%;
+  max-height: 100%;
 `;
 const StyledPrice = styled.p`
   font-weight: 500;
   color: ${PRIMARY.GRAY_7};
 `;
 
-const Item = ({ item, addItem }) => {
+const CartItem = ({
+  item,
+  addItem,
+  incrementQuantity,
+  decrementQuantity,
+  setQuantity,
+}) => {
   return (
     <StyledContainer>
       <StyledImg src={item.image} alt="" />
       <p>{item.name}</p>
       <StyledPrice>{item.price}€</StyledPrice>
       <Button
-        title={'Add to cart'}
-        handleClick={addItem?.bind(this, item.id)}
+        title={'-'}
+        handleClick={(e) => decrementQuantity(item.id, item.quantity)}
+      />
+      <input
+        type="number"
+        defaultValue={item.quantity}
+        onChange={(e) => {
+          setQuantity(item.id, e.target.value);
+        }}
+      />
+      <Button
+        title={'+'}
+        handleClick={(e) => incrementQuantity(item.id, item.quantity)}
       />
     </StyledContainer>
   );
 };
 
-export default Item;
+export default CartItem;
