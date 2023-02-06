@@ -1,18 +1,18 @@
-import React, { useRef } from 'react';
+import React from 'react';
+import Button from '../common/Button';
 import styles from '../../styles/components/CartItem.module.css';
+import ButtonStyles from '../../styles/components/Button.module.css';
 
-const CartItem = ({ item, addItem, setQuantity }) => {
+const CartItem = ({ item, setQuantity }) => {
   const { id, name, price, image, quantity } = item;
-  const inputEl = useRef(null);
+
   const changeQuantity = (e) => {
     setQuantity(id, e.target.value);
   };
   const incrementQuantity = (id, prevQuantity) => {
-    inputEl.current.value = Number(quantity) + 1;
     setQuantity(id, Number(prevQuantity) + 1);
   };
   const decrementQuantity = (id, prevQuantity) => {
-    inputEl.current.value = Number(quantity) - 1;
     setQuantity(id, Number(prevQuantity) - 1);
   };
   return (
@@ -20,14 +20,17 @@ const CartItem = ({ item, addItem, setQuantity }) => {
       <img className={styles.img} src={image} alt="" />
       <p>{name}</p>
       <p className={styles.price}>{price}€</p>
-      <button onClick={(e) => decrementQuantity(id, quantity)}>-</button>
-      <input
-        ref={inputEl}
-        type="number"
-        defaultValue={item.quantity}
-        onChange={changeQuantity}
+      <Button
+        title={'-'}
+        styles={ButtonStyles}
+        handleClick={(e) => decrementQuantity(id, quantity)}
       />
-      <button onClick={(e) => incrementQuantity(id, quantity)}>+</button>
+      <input type="number" value={item.quantity} onChange={changeQuantity} />
+      <Button
+        title={'+'}
+        styles={ButtonStyles}
+        handleClick={(e) => incrementQuantity(id, quantity)}
+      />
     </div>
   );
 };

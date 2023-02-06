@@ -5,7 +5,7 @@ import Home from '../homepage/Home';
 import Shop from '../shop/Shop';
 import './App.css';
 import ScrollToTop from '../common/scrollToTop';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import uniqid from 'uniqid';
 import Cart from '../shop/Cart';
 import components from '../../data/components';
@@ -21,6 +21,7 @@ components.forEach((component) => allItems.push(...component.items));
 const App = () => {
   const [items, setItems] = useState(allItems);
   const [cartItems, setCartItems] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
   const [showCart, setShowCart] = useState(false);
 
   const toggleCartIsActive = () => {
@@ -33,7 +34,6 @@ const App = () => {
   ];
   const addItem = (id) => {
     const sameProduct = cartItems.find((item) => item.id === id);
-
     if (sameProduct) {
       setCartItems(
         cartItems.map((cartItem) =>
@@ -46,6 +46,7 @@ const App = () => {
       const item = items.find((item) => item.id === id);
       setCartItems([...cartItems, { ...item, quantity: 1 }]);
     }
+    computeTotalPrice();
   };
   const setQuantity = (id, quantity) => {
     const item = cartItems.find((cartItem) => cartItem.id === id);
@@ -56,6 +57,12 @@ const App = () => {
           : cartItem,
       ),
     );
+    computeTotalPrice();
+  };
+  const computeTotalPrice = () => {
+    let sum = 0;
+    sum = cartItems.reduce((acc, item) => acc + item.quantity * item.price, 0);
+    setTotalPrice(sum);
   };
   return (
     <div>
@@ -74,6 +81,7 @@ const App = () => {
         showCart={showCart}
         cartItems={cartItems}
         setQuantity={setQuantity}
+        total={totalPrice}
       />
       <Footer />
     </div>

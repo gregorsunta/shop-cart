@@ -1,8 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import styles from '../../../styles/components/HeaderButton.module.css';
 
-const Button = ({ id, title, link, handleClick }) => {
+const LinkButton = ({ id, title, link, handleClick, styles }) => {
   return (
     <NavLink
       key={id}
@@ -19,4 +18,4 @@ const Button = ({ id, title, link, handleClick }) => {
   );
 };
 
-export default Button;
+export default LinkButton;

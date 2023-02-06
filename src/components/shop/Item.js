@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../common/Button';
 import styles from '../../styles/components/Item.module.css';
+import ButtonStyles from '../../styles/components/Button.module.css';
 
 const Item = ({ item, addItem }) => {
   return (
@@ -10,7 +11,8 @@ const Item = ({ item, addItem }) => {
       <p className={styles.price}>{item.price}€</p>
       <Button
         title={'Add to cart'}
-        handleClick={addItem?.bind(this, item.id)}
+        handleClick={() => addItem(item.id)}
+        styles={ButtonStyles}
       />
     </div>
   );

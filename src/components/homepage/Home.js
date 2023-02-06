@@ -1,11 +1,12 @@
 import React from 'react';
-import Button from '../common/Button';
 import styles from '../../styles/components/Home.module.css';
+import ButtonStyles from '../../styles/components/Button.module.css';
+import LinkButton from '../common/LinkButton';
 
 const Home = () => {
   return (
     <div className={styles.container}>
-      <Button title={'shop now'} link={'/shop'} />
+      <LinkButton styles={ButtonStyles} title={'shop now'} link={'/shop'} />
     </div>
   );
 };
