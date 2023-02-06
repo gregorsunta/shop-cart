@@ -1,6 +1,5 @@
 import CartItem from './CartItem';
 import styles from '../../styles/components/Cart.module.css';
-import CartTotal from './CartTotal';
 
 const Cart = ({ showCart: isActive, cartItems, setQuantity, total }) => {
   return (
@@ -16,7 +15,9 @@ const Cart = ({ showCart: isActive, cartItems, setQuantity, total }) => {
           <CartItem key={item.id} item={item} setQuantity={setQuantity} />
         ))}
       </div>
-      <CartTotal value={total} />
+      <div>
+        <p>Total Price: {total}€</p>
+      </div>
     </div>
   );
 };

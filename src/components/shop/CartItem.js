@@ -7,7 +7,7 @@ const CartItem = ({ item, setQuantity }) => {
   const { id, name, price, image, quantity } = item;
 
   const changeQuantity = (e) => {
-    setQuantity(id, e.target.value);
+    setQuantity(id, Number(e.target.value));
   };
   const incrementQuantity = (id, prevQuantity) => {
     setQuantity(id, Number(prevQuantity) + 1);

@@ -46,7 +46,6 @@ const App = () => {
       const item = items.find((item) => item.id === id);
       setCartItems([...cartItems, { ...item, quantity: 1 }]);
     }
-    computeTotalPrice();
   };
   const setQuantity = (id, quantity) => {
     const item = cartItems.find((cartItem) => cartItem.id === id);
@@ -57,15 +56,23 @@ const App = () => {
           : cartItem,
       ),
     );
-    computeTotalPrice();
   };
   const computeTotalPrice = () => {
     let sum = 0;
-    sum = cartItems.reduce((acc, item) => acc + item.quantity * item.price, 0);
+    sum = cartItems.reduce((acc, item) => {
+      console.log(`${item.quantity} ${item.price}`);
+
+      return acc + item.quantity * item.price;
+    }, 0);
     setTotalPrice(sum);
   };
+  useEffect(() => {
+    computeTotalPrice();
+  }, [cartItems]);
+
   return (
     <div>
+      {console.log(cartItems)}
       <ScrollToTop />
       <Header handleShowCart={toggleCartIsActive} buttons={HeaderButtons} />
       <div style={StyledMain}>
