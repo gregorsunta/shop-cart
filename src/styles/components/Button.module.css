@@ -1,0 +1,17 @@
+.container {
+  font-size: var(--size-5);
+  color: var(--gray-9);
+  background-color: var(--yellow-6);
+  text-transform: uppercase;
+  border: none;
+  padding: var(--size-3);
+  transition: background-color 0.1s;
+  border: solid 2px var(--gray-9);
+}
+.container:hover {
+  background-color: var(--yellow-2);
+  border: solid 2px var(--gray-9);
+}
+.container:active {
+  background-color: var(--gray-3);
+}

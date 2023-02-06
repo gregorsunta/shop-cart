@@ -1,38 +1,21 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import styled from 'styled-components';
-import { PRIMARY, SECONDARY, LAYOUT } from '../../styles/variables';
+import { NavLink } from 'react-router-dom';
+import styles from '../../styles/components/Button.module.css';
 
-const StyledButton = styled.button`
-  font-size: ${LAYOUT.SIZE_5};
-  color: ${PRIMARY.GRAY_9};
-  background-color: ${SECONDARY.YELLOW_6};
-  text-transform: uppercase;
-  border: none;
-  padding: ${LAYOUT.SIZE_3};
-  transition: background-color 0.1s;
-  border: solid ${'2px'} ${PRIMARY.GRAY_9};
-  &:hover {
-    background-color: ${SECONDARY.YELLOW_2};
-    border: solid ${'2px'} ${PRIMARY.GRAY_9};
-  }
-  &:active {
-    background-color: ${PRIMARY.GRAY_3};
-  }
-`;
 const Button = ({ title, link, handleClick }) => {
   return (
     <>
-      {/* {console.log(handleClick)} */}
-      {link && (
-        <NavLink to={link}>
-          <StyledButton>{title}</StyledButton>
+      {link ? (
+        <NavLink className={styles.container} to={link}>
+          <p>{title}</p>
         </NavLink>
-      )}
-      {!link && (
-        <StyledButton onClick={handleClick ? handleClick : undefined}>
+      ) : (
+        <p
+          className={styles.container}
+          onClick={handleClick ? handleClick : undefined}
+        >
           {title}
-        </StyledButton>
+        </p>
       )}
     </>
   );

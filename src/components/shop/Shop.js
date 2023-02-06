@@ -2,27 +2,15 @@ import { Route, Routes } from 'react-router-dom';
 import ItemList from './ItemList.js';
 import CategoryList from './CategoryList';
 import components from '../../data/components';
-
-const StyledContainer = {
-  display: 'flex',
-  justifyContent: 'space-between',
-  // alignItems: 'center',
-};
-const StyledAside = {};
-const StyledDiv = {
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  maxWidth: '80vw',
-};
+import styles from '../../styles/components/Shop.module.css';
 
 const Shop = ({ addItem }) => {
   return (
-    <div style={StyledContainer}>
-      <div style={StyledAside}>
+    <div className={styles.container}>
+      <div>
         <CategoryList />
       </div>
-      <div style={StyledDiv}>
+      <div className={styles['list-container']}>
         <Routes>
           <Route
             path={'/'}

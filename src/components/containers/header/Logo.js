@@ -1,26 +1,13 @@
 import React from 'react';
-import styled from 'styled-components';
-import { PRIMARY, SECONDARY, LAYOUT } from '../../../styles/variables';
 import LogoImg from '../../../images/logo.svg';
+import styles from '../../../styles/components/Logo.module.css';
 
-const StyledText = styled.p`
-  color: ${SECONDARY.TEAL_9};
-  font-size: ${LAYOUT.SIZE_6};
-`;
-const StyledImg = styled.img`
-  height: 2.5rem;
-  transform: rotate(-90deg);
-`;
-const StyledLogo = styled.div`
-  display: flex;
-  align-items: center;
-`;
 const Logo = () => {
   return (
-    <StyledLogo>
-      <StyledText>BYTES</StyledText>
-      <StyledImg src={LogoImg} />
-    </StyledLogo>
+    <div className={styles.container}>
+      <p className={styles.text}>BYTES</p>
+      <img className={styles.img} src={LogoImg} alt="" />
+    </div>
   );
 };
 

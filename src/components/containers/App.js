@@ -31,8 +31,7 @@ const App = () => {
     { id: uniqid(), name: 'shop', link: '/shop' },
     { id: uniqid(), name: 'cart', handleClick: toggleCartIsActive },
   ];
-  const addItem = async (id) => {
-    // should this be async??
+  const addItem = (id) => {
     const sameProduct = cartItems.find((item) => item.id === id);
 
     if (sameProduct) {

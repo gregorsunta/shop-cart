@@ -1,0 +1,21 @@
+.container {
+  position: fixed;
+  top: 5vh;
+  right: 5vw;
+  right: -90vw;
+  width: 90vw;
+  height: 90vh;
+  background-color: white;
+  border: 0.2rem solid gray;
+  padding: 1rem;
+  transition: right 0.4s ease-in-out;
+}
+.activeContainer {
+  right: 5vw !important;
+}
+
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+}

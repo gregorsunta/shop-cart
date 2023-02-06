@@ -1,17 +1,11 @@
 import React from 'react';
 import components from '../../data/components';
 import Category from './Category';
-import uniqid from 'uniqid';
-import styled from 'styled-components';
-const StyledContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+import styles from '../../styles/components/CategoryList.module.css';
 
-  width: 20vw;
-`;
 const CategoryList = () => {
   return (
-    <StyledContainer>
+    <div className={styles.container}>
       {components.map((component) => {
         const formattedName = component.name.replaceAll('-', ' ');
         const wordArr = formattedName.split(' ');
@@ -20,7 +14,7 @@ const CategoryList = () => {
         );
         return <Category title={formattedArr.join(' ')} key={formattedName} />;
       })}
-    </StyledContainer>
+    </div>
   );
 };
 

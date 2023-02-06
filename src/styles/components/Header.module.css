@@ -1,0 +1,17 @@
+.container {
+  position: fixed;
+  background-color: var(--gray-2);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.container-child {
+  display: flex;
+  width: 880px;
+  justify-content: space-between;
+  height: min-content;
+}
+.container-buttons {
+  display: flex;
+  align-items: stretch;
+}

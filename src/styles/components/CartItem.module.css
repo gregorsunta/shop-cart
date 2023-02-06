@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  height: 4rem;
+  /* padding: 1rem; */
+  box-shadow: 0px 0px 3px gray;
+  transition: background-color 0.2s;
+}
+.img {
+  max-height: 100%;
+}
+.price {
+  font-weight: 500;
+  color: gray;
+}

@@ -1,17 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import styled from 'styled-components';
-import { LAYOUT } from '../../styles/variables';
 import Item from './Item';
-
-const StyledList = styled.ul`
-  max-width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
-  gap: 2rem;
-  justify-items: stretch;
-  align-items: stretch;
-`;
+import styles from '../../styles/components/ItemList.module.css';
 
 const ItemList = ({ itemsProp, addItem }) => {
   const { category } = useParams();
@@ -31,11 +21,11 @@ const ItemList = ({ itemsProp, addItem }) => {
   }, [category]);
 
   return (
-    <StyledList>
+    <div className={styles.container}>
       {items?.map((item) => {
         return <Item item={item} key={item.id} addItem={addItem} />;
       })}
-    </StyledList>
+    </div>
   );
 };
 

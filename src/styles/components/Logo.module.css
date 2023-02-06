@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+.text {
+  color: var(--teal-9);
+  font-size: var(--size-6);
+}
+.img {
+  height: 2.5rem;
+  width: 2.5rem;
+  transform: rotate(-90deg);
+}

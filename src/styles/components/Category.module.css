@@ -1,0 +1,13 @@
+.name {
+  font-size: var(--size-5);
+  color: var(--gray-9);
+  padding: var(--size-3);
+  text-decoration: none;
+  transition: background-color 0.1s;
+}
+.name:hover {
+  background-color: var(--yellow-2);
+}
+.active {
+  background-color: var(--yellow-2);
+}

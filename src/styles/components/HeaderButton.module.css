@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: var(--size-5);
+  color: var(--gray-9);
+  background-color: transparent;
+  text-transform: uppercase;
+  text-decoration: none;
+  height: 100%;
+  border: none;
+  width: var(--size-8);
+  transition: border-bottom 0.25s;
+  border-bottom: solid 3px transparent;
+}
+.container:hover {
+  background-color: var(--gray-3);
+  border-bottom: solid 3px var(--gray-9);
+}
+.active {
+  background-color: var(--gray-3);
+  border-bottom: solid 3px var(--gray-5);
+}

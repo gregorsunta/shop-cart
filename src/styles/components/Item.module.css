@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  aspect-ratio: 1/1.4;
+  padding: var(--size-6);
+  box-shadow: 0px 0px 3px var(--gray-3);
+  transition: background-color 0.2s;
+}
+.img {
+  max-width: 100%;
+}
+
+.price {
+  font-weight: 500;
+  color: var(--gray-7);
+}

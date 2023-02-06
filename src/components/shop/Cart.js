@@ -1,44 +1,16 @@
 import CartItem from './CartItem';
-import uniqid from 'uniqid';
+import styles from '../../styles/components/Cart.module.css';
 
-// write me a basic react functional component for a shopping cart
-const StyledContainer = {
-  position: 'fixed',
-  top: '5vh',
-  right: '-90vw',
-  width: '90vw',
-  height: '90vh',
-  backgroundColor: 'white',
-  border: '0.2rem solid gray',
-  padding: '1rem',
-  transition: 'right 0.4s ease-in-out',
-};
-const ActiveStyledContainer = {
-  position: 'fixed',
-  top: '5vh',
-  right: '5vw',
-  width: '90vw',
-  height: '90vh',
-  backgroundColor: 'white',
-  border: '0.2rem solid gray',
-  padding: '1rem',
-  transition: 'right 0.4s ease-in-out',
-};
-const ItemContainer = {
-  display: 'flex',
-  flexDirection: 'column',
-
-  // width: '80%',
-  height: '80%',
-};
-
-const Cart = ({ showCart, cartItems, setQuantity }) => {
+const Cart = ({ showCart: isActive, cartItems, setQuantity }) => {
   return (
     <div
-      style={showCart ? ActiveStyledContainer : StyledContainer}
-      className="shopping-cart"
+      className={
+        isActive
+          ? `${styles.container} ${styles.activeContainer}`
+          : styles.container
+      }
     >
-      <div style={ItemContainer}>
+      <div className={styles.itemContainer}>
         {cartItems.map((item) => (
           <CartItem key={item.id} item={item} setQuantity={setQuantity} />
         ))}
