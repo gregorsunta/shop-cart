@@ -26,7 +26,7 @@ const Header = ({ buttons }) => {
                 title={btn.name}
                 link={btn.link}
                 handleClick={btn.handleClick}
-                styles={ButtonStyles}
+                styleClasses={ButtonStyles.container}
               ></Button>
             ),
           )}
