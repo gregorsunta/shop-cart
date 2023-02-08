@@ -1,0 +1,5 @@
+.container {
+  height: 3px;
+  aspect-ratio: 1/1;
+  background-color: red;
+}

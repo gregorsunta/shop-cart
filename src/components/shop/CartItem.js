@@ -22,13 +22,13 @@ const CartItem = ({ item, setQuantity }) => {
       <p className={styles.price}>{price}€</p>
       <Button
         title={'-'}
-        styleClasses={ButtonStyles.container}
+        styleClass={ButtonStyles}
         handleClick={(e) => decrementQuantity(id, quantity)}
       />
       <input type="number" value={item.quantity} onChange={changeQuantity} />
       <Button
         title={'+'}
-        styleClasses={ButtonStyles.container}
+        styleClass={ButtonStyles}
         handleClick={(e) => incrementQuantity(id, quantity)}
       />
     </div>

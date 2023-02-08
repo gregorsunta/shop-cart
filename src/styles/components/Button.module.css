@@ -12,6 +12,6 @@
   background-color: var(--yellow-2);
   border: solid 2px var(--gray-9);
 }
-.container:active {
+.active {
   background-color: var(--gray-3);
 }

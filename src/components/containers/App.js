@@ -28,9 +28,9 @@ const App = () => {
     setShowCart(!showCart);
   };
   const HeaderButtons = [
-    { id: uniqid(), name: 'home', link: '/' },
-    { id: uniqid(), name: 'shop', link: '/shop' },
-    { id: uniqid(), name: 'cart', handleClick: toggleCartIsActive },
+    { id: uniqid(), title: 'home', link: '/' },
+    { id: uniqid(), title: 'shop', link: '/shop' },
+    { id: uniqid(), title: 'cart', handleClick: toggleCartIsActive },
   ];
   const addItem = (id) => {
     const sameProduct = cartItems.find((item) => item.id === id);
@@ -79,7 +79,11 @@ const App = () => {
     <div>
       {console.log(cartItems)}
       <ScrollToTop />
-      <Header handleShowCart={toggleCartIsActive} buttons={HeaderButtons} />
+      <Header
+        handleShowCart={toggleCartIsActive}
+        buttons={HeaderButtons}
+        cartItems={cartItems}
+      />
       <div style={StyledMain}>
         <Routes>
           <Route path={'/'} element={<Home />} />

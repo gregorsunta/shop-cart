@@ -11,7 +11,7 @@
   height: 100%;
   border: none;
   width: var(--size-8);
-  transition: border-bottom 0.25s;
+  transition: all 0.25s;
   border-bottom: solid 3px transparent;
 }
 .container:hover {
@@ -21,4 +21,12 @@
 .active {
   background-color: var(--gray-3);
   border-bottom: solid 3px var(--gray-5);
+}
+
+.special-active {
+  background-color: var(--teal-3);
+}
+.special-active:hover {
+  background-color: var(--teal-4);
+  border-bottom: solid 3px var(--gray-9);
 }

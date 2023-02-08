@@ -1,7 +1,9 @@
 import React from 'react';
 import components from '../../data/components';
-import Category from './Category';
+// import Category from './Category';
 import styles from '../../styles/components/CategoryList.module.css';
+import LinkButton from '../common/LinkButton';
+import CategoryStyles from '../../styles/components/Category.module.css';
 
 const CategoryList = () => {
   return (
@@ -12,7 +14,14 @@ const CategoryList = () => {
         const formattedArr = wordArr.map(
           (word) => word[0].toUpperCase() + word.slice(1),
         );
-        return <Category title={formattedArr.join(' ')} key={formattedName} />;
+        return (
+          <LinkButton
+            title={formattedArr.join(' ')}
+            key={formattedName}
+            styleClass={CategoryStyles}
+            link={component.name}
+          />
+        );
       })}
     </div>
   );

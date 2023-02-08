@@ -6,7 +6,7 @@ import LinkButton from '../common/LinkButton';
 const Home = () => {
   return (
     <div className={styles.container}>
-      <LinkButton styles={ButtonStyles} title={'shop now'} link={'/shop'} />
+      <LinkButton styleClass={ButtonStyles} title={'shop now'} link={'/shop'} />
     </div>
   );
 };
