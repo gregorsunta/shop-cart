@@ -5,6 +5,7 @@ import Button from '../../common/Button';
 import styles from '../../../styles/components/Header.module.css';
 import LogoStyles from '../../../styles/components/Logo.module.css';
 import HeaderButtonStyles from '../../../styles/components/HeaderButton.module.css';
+import TriangleIcon from '../../../styles/icons/right-triangle.jsx';
 
 const Header = ({ buttons, cartItems }) => {
   console.log(HeaderButtonStyles);
@@ -31,12 +32,19 @@ const Header = ({ buttons, cartItems }) => {
           <Button
             title={buttons[2].title}
             handleClick={buttons[2].handleClick}
-            styleClasses={
-              cartItems[0]
-                ? `${HeaderButtonStyles.container} ${HeaderButtonStyles['special-active']}`
-                : `${HeaderButtonStyles.container}`
-            }
-          ></Button>
+            styleClasses={`${HeaderButtonStyles['special-active']} ${HeaderButtonStyles.container}`}
+          >
+            <svg
+              width="0px"
+              height="0px"
+              viewBox="0 0 100 100"
+              className={
+                cartItems[0] ? HeaderButtonStyles['special-mark'] : undefined
+              }
+            >
+              <polygon fill="#E91E63" points="100 0, 0 100 , 0 0"></polygon>
+            </svg>
+          </Button>
         </div>
       </div>
     </header>

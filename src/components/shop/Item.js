@@ -12,7 +12,7 @@ const Item = ({ item, addItem }) => {
       <Button
         title={'Add to cart'}
         handleClick={() => addItem(item.id)}
-        styleClass={ButtonStyles}
+        styleClasses={ButtonStyles.container}
       />
     </div>
   );

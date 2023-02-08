@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Item from './Item';
 import styles from '../../styles/components/ItemList.module.css';
+import ButtonStyles from '../../styles/components/Button.module.css';
 
 const ItemList = ({ itemsProp, addItem }) => {
   const { category } = useParams();
