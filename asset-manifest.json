@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/shop-cart/static/css/main.86813216.css",
+    "main.js": "/shop-cart/static/js/main.d9009a27.js",
+    "static/media/background.jpg": "/shop-cart/static/media/background.87da9964db689bc712fe.jpg",
+    "static/media/PRIME.jpeg": "/shop-cart/static/media/PRIME.8797aef5b57740fa72e4.jpeg",
+    "static/media/TOMAHAWK.jpeg": "/shop-cart/static/media/TOMAHAWK.accd988e55db8051f4de.jpeg",
+    "static/media/CORSAIR1200W.jpeg": "/shop-cart/static/media/CORSAIR1200W.bad460eb1960acc4834c.jpeg",
+    "static/media/Heebo-VariableFont_wght.ttf": "/shop-cart/static/media/Heebo-VariableFont_wght.bdd2bce90ff72a7d6db1.ttf",
+    "static/media/KINGSTON240GB.jpeg": "/shop-cart/static/media/KINGSTON240GB.b44ab173ced378f1baf7.jpeg",
+    "static/media/CORSAIR850W.jpeg": "/shop-cart/static/media/CORSAIR850W.ff69387f26f234548827.jpeg",
+    "static/media/ROG.jpeg": "/shop-cart/static/media/ROG.1ecd40f983ddc30dce28.jpeg",
+    "static/media/Fury32.jpeg": "/shop-cart/static/media/Fury32.4af3eaeae081ca306d5e.jpeg",
+    "static/media/Fury64.jpeg": "/shop-cart/static/media/Fury64.2304d58e111012667a7a.jpeg",
+    "static/media/BARRACUDA4TB.jpeg": "/shop-cart/static/media/BARRACUDA4TB.3212e5ca3c4ec235889e.jpeg",
+    "static/media/I712700F.jpeg": "/shop-cart/static/media/I712700F.e289d3f947efb70b98c0.jpeg",
+    "static/media/I913900K.jpeg": "/shop-cart/static/media/I913900K.2589e5c4c93d9c93023f.jpeg",
+    "static/media/I512400F.jpeg": "/shop-cart/static/media/I512400F.5086a8c0400c343d4a97.jpeg",
+    "static/media/SAMSUNG1TB.jpeg": "/shop-cart/static/media/SAMSUNG1TB.cbb57acf2f0a93120e15.jpeg",
+    "static/media/logo.svg": "/shop-cart/static/media/logo.0bd5a61afb60fb2479352db2f230038e.svg",
+    "index.html": "/shop-cart/index.html",
+    "main.86813216.css.map": "/shop-cart/static/css/main.86813216.css.map",
+    "main.d9009a27.js.map": "/shop-cart/static/js/main.d9009a27.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.86813216.css",
+    "static/js/main.d9009a27.js"
+  ]
+}
