@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shop-cart/static/css/main.86813216.css",
-    "main.js": "/shop-cart/static/js/main.87b61c46.js",
+    "main.js": "/shop-cart/static/js/main.b156d580.js",
     "static/media/background.jpg": "/shop-cart/static/media/background.87da9964db689bc712fe.jpg",
     "static/media/PRIME.jpeg": "/shop-cart/static/media/PRIME.8797aef5b57740fa72e4.jpeg",
     "static/media/TOMAHAWK.jpeg": "/shop-cart/static/media/TOMAHAWK.accd988e55db8051f4de.jpeg",
@@ -20,10 +20,10 @@
     "static/media/logo.svg": "/shop-cart/static/media/logo.0bd5a61afb60fb2479352db2f230038e.svg",
     "index.html": "/shop-cart/index.html",
     "main.86813216.css.map": "/shop-cart/static/css/main.86813216.css.map",
-    "main.87b61c46.js.map": "/shop-cart/static/js/main.87b61c46.js.map"
+    "main.b156d580.js.map": "/shop-cart/static/js/main.b156d580.js.map"
   },
   "entrypoints": [
     "static/css/main.86813216.css",
-    "static/js/main.87b61c46.js"
+    "static/js/main.b156d580.js"
   ]
 }
