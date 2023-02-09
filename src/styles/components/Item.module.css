@@ -42,3 +42,7 @@
 .add-button {
   width: 75%;
 }
+.name {
+  text-decoration: none;
+  color: black;
+}

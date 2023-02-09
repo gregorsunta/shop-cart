@@ -11,12 +11,12 @@
   border: none;
   width: var(--size-8);
   transition: all 0.25s;
-  border-bottom: solid 0.15rem transparent;
+  border-bottom: solid 0.3rem transparent;
 }
 .container:hover {
   color: var(--gray-9);
   background-color: var(--gray-5);
-  border-bottom: solid 3px transparent;
+  border-bottom: solid 0.3rem transparent;
 }
 .active {
   color: white;

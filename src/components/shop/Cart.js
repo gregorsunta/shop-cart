@@ -19,7 +19,7 @@ const Cart = ({
       }
     >
       <Button
-        title={'close'}
+        title={'Close'}
         handleClick={toggleCartIsActive}
         styles={ButtonStyles}
       />

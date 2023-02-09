@@ -4,7 +4,7 @@ import CategoryList from './CategoryList';
 import components from '../../data/components';
 import styles from '../../styles/components/Shop.module.css';
 
-const Shop = ({ addItem }) => {
+const ShopPage = ({ addItem }) => {
   return (
     <div className={styles.container}>
       <div>
@@ -26,4 +26,4 @@ const Shop = ({ addItem }) => {
   );
 };
 
-export default Shop;
+export default ShopPage;

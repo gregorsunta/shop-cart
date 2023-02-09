@@ -2,15 +2,18 @@ import React from 'react';
 import Button from '../common/Button';
 import styles from '../../styles/components/Item.module.css';
 import ButtonStyles from '../../styles/components/Button.module.css';
+import { Link } from 'react-router-dom';
 
 const Item = ({ item, addItem }) => {
   return (
     <div className={styles.container}>
-      <div className={styles['img-container']}>
+      <Link to={`/products/${item.id}`} className={styles['img-container']}>
         <img className={styles.img} src={item.image} alt="" />
-      </div>
+      </Link>
       <div className={styles['other-container']}>
-        <p>{item.name}</p>
+        <Link className={styles.name} to={`/products/${item.id}`}>
+          {item.name}
+        </Link>
         <div>
           <p className={styles.price}>{item.price}€</p>
           <Button

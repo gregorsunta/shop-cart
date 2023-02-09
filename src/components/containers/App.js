@@ -2,13 +2,14 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './header/Header';
 import Footer from './Footer';
 import Home from '../homepage/Home';
-import Shop from '../shop/Shop';
+import ShopPage from '../shop/ShopPage';
 import './App.css';
 import ScrollToTop from '../common/scrollToTop';
 import { useEffect, useState } from 'react';
 import uniqid from 'uniqid';
 import Cart from '../shop/Cart';
 import components from '../../data/components';
+import ItemPage from '../shop/ItemPage';
 
 const StyledMain = {
   paddingTop: '2.5rem',
@@ -86,9 +87,10 @@ const App = () => {
       <div style={StyledMain}>
         <Routes>
           <Route path={'/'} element={<Home />} />
+          <Route path={'/products/:id'} element={<ItemPage items={items} />} />
           <Route
             path={'/shop/*'}
-            element={<Shop showCart={showCart} addItem={addItem} />}
+            element={<ShopPage showCart={showCart} addItem={addItem} />}
           />
         </Routes>
       </div>
