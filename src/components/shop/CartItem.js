@@ -17,7 +17,7 @@ const CartItem = ({ item, setQuantity }) => {
   };
   return (
     <div className={styles.container}>
-      <img className={styles.img} src={image} alt="" />
+      <img src={image} alt="" />
       <p>{name}</p>
       <p className={styles.price}>{price}€</p>
       <Button
@@ -25,7 +25,12 @@ const CartItem = ({ item, setQuantity }) => {
         styles={ButtonStyles}
         handleClick={(e) => decrementQuantity(id, quantity)}
       />
-      <input type="number" value={item.quantity} onChange={changeQuantity} />
+      <input
+        className={styles.input}
+        type="number"
+        value={item.quantity}
+        onChange={changeQuantity}
+      />
       <Button
         title={'+'}
         styles={ButtonStyles}

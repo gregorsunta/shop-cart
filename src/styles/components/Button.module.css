@@ -1,4 +1,7 @@
 .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: var(--size-5);
   color: white;
   background-color: var(--teal-7);
@@ -7,6 +10,7 @@
   padding: var(--size-3);
   transition: background-color 0.1s;
   border: solid 1px var(--gray-9);
+  text-decoration: none;
 }
 .container:hover {
   background-color: var(--teal-8);

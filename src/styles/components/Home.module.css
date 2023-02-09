@@ -1,9 +1,32 @@
 .container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100%;
+  flex-direction: column;
+  min-height: 100vh;
 
-  background-image: url('../../images/background.jpg');
-  background-size: cover;
+  position: relative;
+}
+.background {
+  position: absolute;
+  z-index: -3;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.background img {
+  width: 100%;
+}
+.foreground {
+  padding: var(--size-8);
+  gap: var(--size-3);
+}
+.foreground > h1 {
+  font-size: var(--size-9);
+  color: white;
+}
+.foreground > h2 {
+  font-size: var(--size-6);
+  color: white;
+}
+.foreground > a {
+  width: 6rem;
 }

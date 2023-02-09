@@ -97,6 +97,7 @@ const App = () => {
         cartItems={cartItems}
         setQuantity={setQuantity}
         total={totalPrice}
+        toggleCartIsActive={toggleCartIsActive}
       />
       <Footer />
     </div>
