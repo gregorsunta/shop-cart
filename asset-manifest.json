@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/shop-cart/static/css/main.86813216.css",
-    "main.js": "/shop-cart/static/js/main.21eaacb7.js",
+    "main.css": "/shop-cart/static/css/main.f063833d.css",
+    "main.js": "/shop-cart/static/js/main.c1a957cb.js",
     "static/media/background.jpg": "/shop-cart/static/media/background.87da9964db689bc712fe.jpg",
     "static/media/PRIME.jpeg": "/shop-cart/static/media/PRIME.8797aef5b57740fa72e4.jpeg",
     "static/media/TOMAHAWK.jpeg": "/shop-cart/static/media/TOMAHAWK.accd988e55db8051f4de.jpeg",
@@ -19,11 +19,11 @@
     "static/media/SAMSUNG1TB.jpeg": "/shop-cart/static/media/SAMSUNG1TB.cbb57acf2f0a93120e15.jpeg",
     "static/media/logo.svg": "/shop-cart/static/media/logo.0bd5a61afb60fb2479352db2f230038e.svg",
     "index.html": "/shop-cart/index.html",
-    "main.86813216.css.map": "/shop-cart/static/css/main.86813216.css.map",
-    "main.21eaacb7.js.map": "/shop-cart/static/js/main.21eaacb7.js.map"
+    "main.f063833d.css.map": "/shop-cart/static/css/main.f063833d.css.map",
+    "main.c1a957cb.js.map": "/shop-cart/static/js/main.c1a957cb.js.map"
   },
   "entrypoints": [
-    "static/css/main.86813216.css",
-    "static/js/main.21eaacb7.js"
+    "static/css/main.f063833d.css",
+    "static/js/main.c1a957cb.js"
   ]
 }
