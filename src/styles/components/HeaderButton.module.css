@@ -13,29 +13,17 @@
   border: none;
   width: var(--size-8);
   transition: all 0.25s;
-  border-bottom: solid 3px transparent;
+  border-bottom: solid 0.15rem transparent;
 }
 .container:hover {
   background-color: var(--gray-3);
-  border-bottom: solid 3px var(--gray-9);
+  border-bottom: solid 0.15rem var(--gray-9);
 }
 .active {
   background-color: var(--gray-3);
-  border-bottom: solid 3px var(--gray-5);
+  border-bottom: solid 0.15rem var(--gray-5);
 }
-
-.special-active {
-  background-color: var(--teal-3);
-}
-.special-active:hover {
-  background-color: var(--teal-4);
-  border-bottom: solid 3px var(--gray-9);
-}
-.special-mark {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 10px;
-  height: 10px;
-  transform: rotate(90deg);
+.active:hover {
+  background-color: var(--gray-4);
+  border-bottom: solid 0.15rem var(--gray-9);
 }

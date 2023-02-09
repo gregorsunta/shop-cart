@@ -11,7 +11,7 @@
   transition: right 0.4s ease-in-out;
 }
 .activeContainer {
-  right: 5vw !important;
+  right: 5vw;
 }
 
 .itemContainer {

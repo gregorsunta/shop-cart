@@ -4,10 +4,13 @@
   padding: var(--size-3);
   text-decoration: none;
   transition: background-color 0.1s;
+  border-bottom: 0.05rem solid var(--gray-3);
 }
 .container:hover {
-  background-color: var(--yellow-2);
+  font-weight: 600;
+  /* background-color: var(--teal-2); */
 }
 .active {
-  background-color: var(--yellow-2);
+  font-weight: 600;
+  /* background-color: var(--teal-1); */
 }

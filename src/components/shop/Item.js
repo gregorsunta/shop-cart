@@ -6,14 +6,21 @@ import ButtonStyles from '../../styles/components/Button.module.css';
 const Item = ({ item, addItem }) => {
   return (
     <div className={styles.container}>
-      <img className={styles.img} src={item.image} alt="" />
-      <p>{item.name}</p>
-      <p className={styles.price}>{item.price}€</p>
-      <Button
-        title={'Add to cart'}
-        handleClick={() => addItem(item.id)}
-        styleClasses={ButtonStyles.container}
-      />
+      <div className={styles['img-container']}>
+        <img className={styles.img} src={item.image} alt="" />
+      </div>
+      <div className={styles['other-container']}>
+        <p>{item.name}</p>
+        <div>
+          <p className={styles.price}>{item.price}€</p>
+          <Button
+            className={styles['add-button']}
+            title={'Add to cart'}
+            handleClick={() => addItem(item.id)}
+            styles={ButtonStyles}
+          />
+        </div>
+      </div>
     </div>
   );
 };

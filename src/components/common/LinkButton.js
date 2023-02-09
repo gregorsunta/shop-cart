@@ -2,8 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const LinkButton = ({ id, title, link, handleClick, styleClass }) => {
-  console.log(link);
-
   return (
     <NavLink
       key={id}

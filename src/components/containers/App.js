@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Header from './header/Header';
 import Footer from './Footer';
 import Home from '../homepage/Home';
@@ -77,7 +77,6 @@ const App = () => {
 
   return (
     <div>
-      {console.log(cartItems)}
       <ScrollToTop />
       <Header
         handleShowCart={toggleCartIsActive}

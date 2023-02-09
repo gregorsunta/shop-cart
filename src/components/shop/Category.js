@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import styles from '../../styles/components/Category.module.css';
 import LinkButton from '../common/LinkButton';
 

@@ -1,8 +1,13 @@
 import React from 'react';
 
-const Button = ({ title, handleClick, styleClasses, children }) => {
+const Button = ({ isActive, title, handleClick, styles, children }) => {
   return (
-    <button className={styleClasses} onClick={handleClick}>
+    <button
+      className={
+        isActive ? `${styles.container} ${styles.active}` : styles.container
+      }
+      onClick={handleClick}
+    >
       {title}
       {children}
     </button>

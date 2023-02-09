@@ -1,6 +1,5 @@
 import React from 'react';
 import components from '../../data/components';
-// import Category from './Category';
 import styles from '../../styles/components/CategoryList.module.css';
 import LinkButton from '../common/LinkButton';
 import CategoryStyles from '../../styles/components/Category.module.css';
