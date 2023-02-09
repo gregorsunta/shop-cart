@@ -87,7 +87,10 @@ const App = () => {
       <div style={StyledMain}>
         <Routes>
           <Route path={'/'} element={<Home />} />
-          <Route path={'/products/:id'} element={<ItemPage items={items} />} />
+          <Route
+            path={'/products/:id'}
+            element={<ItemPage items={items} addItem={addItem} />}
+          />
           <Route
             path={'/shop/*'}
             element={<ShopPage showCart={showCart} addItem={addItem} />}

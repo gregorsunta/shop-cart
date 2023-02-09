@@ -4,7 +4,7 @@ import styles from '../../styles/components/ItemPage.module.css';
 import Button from '../common/Button.js';
 import ButtonStyles from '../../styles/components/Button.module.css';
 
-const ItemPage = ({ items }) => {
+const ItemPage = ({ items, addItem }) => {
   const { id } = useParams();
   const item = items.find((item) => item.id === id);
 
@@ -21,7 +21,11 @@ const ItemPage = ({ items }) => {
           obcaecati? Explicabo, facilis. Voluptatum quo sunt unde porro placeat
           ratione omnis maxime.
         </p>
-        <Button title={'Add to cart'} styles={ButtonStyles}></Button>
+        <Button
+          title={'Add to cart'}
+          styles={ButtonStyles}
+          handleClick={addItem.bind(this, item.id)}
+        />
       </div>
     </div>
   );
