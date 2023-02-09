@@ -8,8 +8,6 @@ import ButtonStyles from '../../../styles/components/HeaderButton.module.css';
 import CartButtonStyles from '../../../styles/components/HeaderCartButton.module.css';
 
 const Header = ({ buttons, cartItems }) => {
-  console.log(ButtonStyles);
-
   return (
     <header className={styles.container}>
       <div className={styles['container-child']}>

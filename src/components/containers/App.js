@@ -65,8 +65,6 @@ const App = () => {
   const computeTotalPrice = () => {
     let sum = 0;
     sum = cartItems.reduce((acc, item) => {
-      console.log(`${item.quantity} ${item.price}`);
-
       return acc + item.quantity * item.price;
     }, 0);
     setTotalPrice(sum);
